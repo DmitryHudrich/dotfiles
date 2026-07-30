@@ -110,5 +110,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+fwd() { for p in "$@"; do ssh -O forward -L "${p}:localhost:${p}" vds; done }
+unfwd() { for p in "$@"; do ssh -O cancel -L "${p}:localhost:${p}" vds; done }
+
 eval "$(zoxide init zsh)"
 
