@@ -111,8 +111,8 @@ source $ZSH/oh-my-zsh.sh
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-fwd() { for p in "$@"; do ssh -O forward -L "${p}:localhost:${p}" vds; done }
-unfwd() { for p in "$@"; do ssh -O cancel -L "${p}:localhost:${p}" vds; done }
+fwd() { for p in "$@"; do ssh -O forward -L "${p}:localhost:${p}" bch; done }
+unfwd() { for p in "$@"; do ssh -O cancel -L "${p}:localhost:${p}" bch; done }
 
 eval "$(zoxide init zsh)"
 
